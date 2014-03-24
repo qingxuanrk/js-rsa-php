@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>登录</title>
+	<link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.2/css/bootstrap.css" />
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./js/login.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./js/rsa/md5.js" charset="utf-8"></script>
+
+
+  <script language="JavaScript" type="text/javascript" src="./js/rsa/jsbn.js"></script>
+  <script language="JavaScript" type="text/javascript" src="./js/rsa/prng4.js"></script>
+  <script language="JavaScript" type="text/javascript" src="./js/rsa/rng.js"></script>
+  <script language="JavaScript" type="text/javascript" src="./js/rsa/rsa.js"></script>
+  <script language="JavaScript" type="text/javascript" src="./js/rsa/base64.js"></script>
+
+
+	<style type="text/css">
+		.wrapper {width: 220px;margin: 100px auto;}
+		body{background:#f2f2f2;}
+	</style>
+</head>
+<body>
+<center>
+	<div style="box-shadow:0 0 10px gray;border-radius:5px 5px 0px 0px;width:480px;height:50px;color:#fff;text-align:center;padding:0 20px;margin-top:50px;">
+		<!--
+		<img src="http://www.baidu.com/img/bdlogo.gif" style="height:50px;position:relative;top:-2px;">
+		-->
+	</div>
+	<div style="height:250px;;background:#fff;border:1px solid #cfcfcf;width:480px;padding:20px;border-radius:0px 0px 5px 5px;">
+		<div style="margin-top:30px;"></div>
+		<form onsubmit="return predo()" name="MEF"  >
+			<p>
+				账  号：
+				<input id="aname" name="username" placeholder="用户名" class="inp" type="text"></p>
+			<p>
+				密  码：
+				<input id="apass" name="password" placeholder="密码" class="inp" type="password"></p>
+			<p style="margin-top:25px;">
+            <button id="asubmit" class="btn btn-primary">立即登录</button>
+			</p>
+		</form>
+		<p style="margin-top:25px;">
+			<font id="message" color="red"></font>
+		</p>
+	</div>
+</center> 
+</body>
+</html>

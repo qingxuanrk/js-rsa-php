@@ -36,7 +36,7 @@ $(function(){
         logindata['time']     = timestamp;
         logindata['md5']     = hex_md5(logindata['i']);
 
-        ajax(_url('verify'), logindata, function (data){
+        ajaxGet(_url('verify'), logindata, function (data){
             if (data.data == 'ok') {location.reload(true);}
         });
     }

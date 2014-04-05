@@ -46,3 +46,37 @@ function ajax(urls, datas, functions, cached) {
         },
     });
 }
+function ajaxPost(urls, datas, functions, cached) {
+    if(cached) {
+        var data = getStorage(urls);
+        if (data) {functions(data);return;}
+    }
+    $.ajax({
+        type     : "POST",
+        url      :  urls,
+        datatype : 'json',
+        data     : datas,
+        success  : function(data) {
+            var data = JSON.parse(data);
+            if(cached) {setStorage(urls, data)};
+            functions(data);
+        },
+    });
+}
+function ajaxGet(urls, datas, functions, cached) {
+    if(cached) {
+        var data = getStorage(urls);
+        if (data) {functions(data);return;}
+    }
+    $.ajax({
+        type     : "GET",
+        url      :  urls,
+        datatype : 'json',
+        data     : datas,
+        success  : function(data) {
+            var data = JSON.parse(data);
+            if(cached) {setStorage(urls, data)};
+            functions(data);
+        },
+    });
+}
